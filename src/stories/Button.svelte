@@ -22,15 +22,6 @@
   $: mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
 
   $: style = backgroundColor ? `background-color: ${backgroundColor}` : ''  
-  import { superValidateSync, superForm } from 'sveltekit-superforms/client';
-  
-
-  import { z } from 'zod';
-  const testSchema = z.object({
-        name: z.string().min(2),
-    });
-  const formValidated = superValidateSync({ name: 'ole' }, testSchema);
-  const form = superForm(formValidated)
 </script>
 
 <button
